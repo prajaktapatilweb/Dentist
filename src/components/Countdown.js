@@ -8,32 +8,49 @@ import CountUp from 'react-countup'
 export default function Countdown() {
     var Details = [
         {
-            numbers: "2000",
-            title: "hfjbgj"
+            numbers: "3000",
+            title: "Happy Patients"
+
         },
         {
             numbers: "5000",
-            title: "hfjbgj"
+            title: "Dental Implant"
         },
         {
             numbers: "6000",
-            title: "hfjbgj"
-        }
+            title: "Crown & Bridges"
+        },
+        {
+            numbers: "2000",
+            title: " Root Canal Treatment"
+        },
     ]
 
     return (
         <div>
-            <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4, backgroundColor: 'background.paper' }}>
+            <Box sx={{
+                boxShadow: 2, pt: {
+                    xs: 6,
+                    md: 8,
+                },
+                pb: 14, borderRadius: 4, backgroundColor: '#f2f5f5'
+            }}>
 
                 <Container maxWidth="lg">
-                    <Typography variant="h1" sx={{ fontSize: 40 }}>
-                        Our Satisfied Clients
+                    <Typography variant="h1" sx={{
+                        fontSize: 40, pb: {
+                            xs: 5,
+                            md: 5,
+                        },
+                    }} gutterBottom>
+                        Our Sucess In Numbers
                     </Typography>
 
-                    <Grid container spacing={3} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
+                    <Grid container spacing={2} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
                         {Details.map((item, i) => (
-                            <Grid item xs={12} md={4}>
-                                <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
+                            <Grid item xs={12} md={3}>
+                                <Card sx={{ textAlign: 'center', mb: { xs: 1, md: 0 }, padding: 3, borderRadius: 5 }}>
+
                                     <Typography
                                         sx={{ color: 'secondary.main', mb: { xs: 1, md: 2 }, fontSize: { xs: 34, md: 44 }, fontWeight: 'bold' }}
                                     >
@@ -42,7 +59,8 @@ export default function Countdown() {
                                     <Typography color="text.secondary" variant="h5">
                                         {item.title}
                                     </Typography>
-                                </Box>
+
+                                </Card>
                             </Grid>
                         ))}
                     </Grid>

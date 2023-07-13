@@ -74,7 +74,7 @@ const HomePopularCourse = () => {
             justifyContent: { xs: 'center', md: 'flex-start' },
         }}>
               <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 48 } }}>
-                Most Popular Courses
+                Our Popular Servises
               </Typography>
             </Box>
           </Grid>

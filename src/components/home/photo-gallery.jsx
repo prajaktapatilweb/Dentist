@@ -1,22 +1,23 @@
 import React from 'react';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import Slider from 'react-slick';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme, styled } from '@mui/material/styles';
+import { IconButton, useMediaQuery } from '@mui/material';
 import IconArrowBack from '@mui/icons-material/ArrowBack';
 import IconArrowForward from '@mui/icons-material/ArrowForward';
-import { MentorCardItem } from '@/components/mentor';
-import { data } from './mentors.data';
+import { data } from './popular-course.data';
+import { CourseCardItem } from '@/components/course';
+import PhotoCardItem from '../course/photo-card-item';
 const SliderArrow = (props) => {
     const { onClick, type, className } = props;
     return (<IconButton sx={{
             backgroundColor: 'background.paper',
             color: 'primary.main',
             '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' },
-            bottom: '-28px !important',
+            bottom: { xs: '-70px !important', md: '-28px !important' },
             left: 'unset !important',
             right: type === 'prev' ? '60px !important' : '0 !important',
             zIndex: 10,
@@ -40,12 +41,12 @@ const StyledDots = styled('ul')(({ theme }) => ({
         },
     },
 }));
-const HomeOurMentors = () => {
+const Photogallery = () => {
     const { breakpoints } = useTheme();
     const matchMobileView = useMediaQuery(breakpoints.down('md'));
     const sliderConfig = {
         infinite: true,
-        // autoplay: true,
+        autoplay: true,
         speed: 300,
         slidesToShow: matchMobileView ? 1 : 3,
         slidesToScroll: 1,
@@ -55,26 +56,37 @@ const HomeOurMentors = () => {
         appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
         customPaging: () => (<Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }}/>),
     };
-    return (<Box id="mentors" sx={{
+    return (<Box id="popular-course" sx={{
             pt: {
                 xs: 6,
                 md: 8,
             },
-            pb: {
-                xs: 8,
-                md: 12,
-            },
-            backgroundColor: '#ecf3f3',
+            pb: 14,
+            backgroundColor: 'background.default',
         }}>
       <Container maxWidth="lg">
-        <Typography variant="h1" sx={{ fontSize: 40 }}>
-        What Our Clients Say
-        </Typography>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={12}>
+            <Box sx={{
+            height: '100%',
+            width: { xs: '100%', md: '90%' },
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: { xs: 'center', md: 'flex-start' },
+        }}>
+              <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 48 } }}>
+               Photo Gallery
+              </Typography>
+            </Box>
+          </Grid>
 
-        <Slider {...sliderConfig}>
-          {data.map((item) => (<MentorCardItem key={String(item.id)} item={item}/>))}
-        </Slider>
+          <Grid item xs={12} md={12}>
+            <Slider {...sliderConfig}>
+              {data.map((item) => (<PhotoCardItem key={String(item.id)} item={item}/>))}
+            </Slider>
+          </Grid>
+        </Grid>
       </Container>
     </Box>);
 };
-export default HomeOurMentors;
+export default Photogallery;
