@@ -33,7 +33,7 @@ export default function Countdown() {
                     xs: 6,
                     md: 8,
                 },
-                pb: 14, borderRadius: 4, backgroundColor: '#f2f5f5'
+                pb: 14, borderRadius: 4, backgroundColor: '#f8f8f8'
             }}>
 
                 <Container maxWidth="lg">
@@ -49,14 +49,14 @@ export default function Countdown() {
                     <Grid container spacing={2} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
                         {Details.map((item, i) => (
                             <Grid item xs={12} md={3}>
-                                <Card sx={{ textAlign: 'center', mb: { xs: 1, md: 0 }, padding: 3, borderRadius: 5 }}>
+                                <Card sx={{ textAlign: 'center', mb: { xs: 1, md: 0 }, padding: 3, borderRadius: 5, background: "#127c71" }}>
 
                                     <Typography
                                         sx={{ color: 'secondary.main', mb: { xs: 1, md: 2 }, fontSize: { xs: 34, md: 44 }, fontWeight: 'bold' }}
                                     >
                                         <CountUp end={item.numbers} duration={5} />+
                                     </Typography>
-                                    <Typography color="text.secondary" variant="h5">
+                                    <Typography color="white" variant="h5">
                                         {item.title}
                                     </Typography>
 

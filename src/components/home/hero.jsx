@@ -12,7 +12,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 const HomeHero = () => {
   return (
 
-    <Box id="hero" sx={{  backgroundImage: `url("/images/dentalhero.jpg")`  ,backgroundRepeat:"no-repeat" ,backgroundSize:"cover", position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
+    <Box id="hero" sx={{  backgroundImage: `url("/images/herodental.jpg")`  ,backgroundRepeat:"no-repeat" ,backgroundSize:"cover", position: 'relative', width:"100%", height:"700px", pt: 4, pb: { xs: 8, md: 10 } }}>
      {/* <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}> */}
       <Container maxWidth="lg">
         <Grid container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>

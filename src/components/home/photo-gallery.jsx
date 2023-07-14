@@ -62,7 +62,7 @@ const Photogallery = () => {
                 md: 8,
             },
             pb: 14,
-            backgroundColor: 'background.default',
+            backgroundColor: '#fafafa',
         }}>
       <Container maxWidth="lg">
         <Grid container spacing={2}>
