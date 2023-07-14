@@ -38,7 +38,7 @@ const Clinicinfo = () => {
             <Grid container spacing={3}>
                 <Grid item xs={12} md={5}>
                     <Box sx={{ position: 'relative', border: "3px solid black" }}>
-                        <Image src="/images/clinicphoto.png" width={600} height={678} quality={97} alt="Feature img" />
+                        <Image src="/images/clinicphoto2.png" width={600} height={678} quality={97} alt="Feature img" />
                         <Box sx={{
                             position: 'absolute',
                             top: -39,
