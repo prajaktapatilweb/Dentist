@@ -43,7 +43,7 @@ export default function Equipment() {
                     </Typography>
                     <Grid container spacing={2}>
                         {Details.map((item, i) => (
-                            <Grid item xs={12} md={4}>
+                            <Grid item xs={12} md={4} key={i}>
                                 <Box sx={{
                                     px: 1,
                                     py: 4,
