@@ -9,7 +9,6 @@ export default async function handler(req, res) {
   const sgMail = require('@sendgrid/mail')
 
   sgMail.setApiKey(process.env.API_URL)
-  // sgMail.setApiKey('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')
   const { method } = req
   switch (method) {
     case 'POST':
