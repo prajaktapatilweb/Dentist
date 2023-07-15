@@ -1,12 +1,20 @@
 import React from 'react'
+import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
+import { PlayArrow } from '@mui/icons-material'
+import ModalVideo from 'react-modal-video'
+
 
 const HomeHero = () => {
+  const openInNewTab = (url) => {
+    window.open(url, '_blank', 'noreferrer');
+  };
+  
   return (
     <Box
       sx={{
@@ -110,11 +118,12 @@ const HomeHero = () => {
                   Enquire Now
                 </StyledButton>
               </ScrollLink>
-              {/* <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="outlined" startIcon={<PlayArrowIcon />}>
-                    Watch Video
+            
+              <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
+                  <StyledButton color="primary" size="large" variant="outlined" startIcon={<PlayArrow/>} onClick={() => openInNewTab('https://www.youtube.com/@drakshaysdentavenuegeneral8556')}>
+               Watch Video
                   </StyledButton>
-                </ScrollLink> */}
+                </ScrollLink>
             </Box>
           </Grid>
         </Grid>

@@ -59,33 +59,34 @@ export default function Drsudnya() {
 
                             <Typography variant="body1" sx={{ color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
                                 Meet Dr. Saudnya, the Co- founder of DentAvenue Dental Clinic in Chembur. She is an expert in Root Canals, Crown, Bridges, Cosmetic Dentistry, Dentures and other dental treatments. Dr. Saudnya has been providing her patients with the finest dental care and giving them the perfect smile they deserve for the past 8 years.
-                                <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }} aria-label="contacts">
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemIcon>
-                                                <StarIcon />
-                                            </ListItemIcon>
-                                            <ListItemText primary="8+ Years of experience" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemIcon>
-                                                <StarIcon />
-                                            </ListItemIcon>
-                                            <ListItemText primary="Highly Equipped Clinic" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                    <ListItem disablePadding>
-                                        <ListItemButton>
-                                            <ListItemIcon>
-                                                <StarIcon />
-                                            </ListItemIcon>
-                                            <ListItemText primary="Good quality care & service" />
-                                        </ListItemButton>
-                                    </ListItem>
-                                </List>
                             </Typography>
+                            <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }} aria-label="contacts">
+                                <ListItem disablePadding>
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <StarIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="8+ Years of experience" />
+                                    </ListItemButton>
+                                </ListItem>
+                                <ListItem disablePadding>
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <StarIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Highly Equipped Clinic" />
+                                    </ListItemButton>
+                                </ListItem>
+                                <ListItem disablePadding>
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            <StarIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Good quality care & service" />
+                                    </ListItemButton>
+                                </ListItem>
+                            </List>
+
                         </Grid>
                         <Grid item xs={12} md={5}>
                             <Box sx={{ position: 'relative' }}>

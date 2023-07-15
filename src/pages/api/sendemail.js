@@ -1,12 +1,15 @@
 // api/users.js
 
+
 export default async function handler(req, res) {
   //   console.log('Received Data 12', req.body)
 
-  console.log('first 21111', process.env.NEXT_PUBLIC_SENDGRID_API_KEY)
-//   console.log('first 21', loadEnvConfig())
+  console.log('first 21', process.env.API_URL)
+  //   console.log('first 21', loadEnvConfig())
   const sgMail = require('@sendgrid/mail')
-  sgMail.setApiKey('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')
+
+  sgMail.setApiKey(process.env.API_URL)
+  // sgMail.setApiKey('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')
   const { method } = req
   switch (method) {
     case 'POST':

@@ -100,6 +100,7 @@ const HomeFeature = () => {
               Implantology) from Government Dental College, Mumbai. He is a specialist in Full Mouth Rehabilitation,
               Smile Designing, Implants, Complete and Partial Dentures, Laminates and Veneers. He was also an
               ex-assistant professor at Government Dental College, Mumbai
+              </Typography>
               <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }} aria-label="contacts">
                 <ListItem disablePadding>
                   <ListItemButton>
@@ -126,7 +127,7 @@ const HomeFeature = () => {
                   </ListItemButton>
                 </ListItem>
               </List>
-            </Typography>
+          
           </Grid>
         </Grid>      
      </Container>
